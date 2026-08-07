@@ -1,9 +1,9 @@
+import Header from './Header.jsx'
+
 function App() {
   return (
-    <div>
-      <h1>Hello React</h1>
-    </div>
-  )
+    <Header/>
+  );
 }
 
 export default App
