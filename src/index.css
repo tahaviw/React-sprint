@@ -15,6 +15,10 @@ body {
 
 /* Header */
 .site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
   border-bottom: 1px solid #e0e0e0;
   padding: 16px 24px;
 }
@@ -46,11 +50,11 @@ body {
   border-top: 1px solid #e0e0e0;
 }
 
-/* Food */
-body > ul {
+/* Food (EX-component) */
+/* body > ul {
   padding: 24px 48px;
   max-width: 600px;
-}
+} */
 
 /* Footer */
 footer {
