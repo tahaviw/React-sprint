@@ -2,11 +2,11 @@ import Card from './Card.jsx'
 
 function CardList() {
     return(
-        <>
-        <Card/>
-        <Card/>
-        <Card/>
-        </>
+        <div className='card-list'>
+            <Card/>
+            <Card/>
+            <Card/>
+        </div>
     );
 }
 
