@@ -8,7 +8,7 @@ function CardList() {
             <Card title="Salsabil" >I'm the middle child</Card>
             <Card title="Special Card">
                 <p>This paragraph is passed as children</p>
-                <button>Click me</button>
+                <button className="btn">Click me</button>
             </Card>
         </div>
     );
