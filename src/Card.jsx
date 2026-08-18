@@ -5,7 +5,7 @@ function Card({title, children}) {
         <div className="card">
             <img className="card-image" src={ProfilePic} alt="profile picture" />
             <h2 className="card-title" >{title}</h2>
-            <p className="card-paragraph">{children}</p>
+            <div className="card-body">{children}</div>
         </div>
     )
 }
