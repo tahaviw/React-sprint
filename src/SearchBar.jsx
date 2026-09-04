@@ -5,7 +5,12 @@ function SearchBar() {
 
     return(
         <div>
-            <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} />
+            <input 
+                type="text"     
+                value={query}   
+                onChange={(e) => setQuery(e.target.value)}  
+                placeholder="Search..."
+            />
             <p>You Searched: {query}</p>
         </div>
     )    
