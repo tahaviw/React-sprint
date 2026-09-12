@@ -13,11 +13,11 @@ function App() {
     <>
       <Header/>
       <SearchBar/>
-      <button onClick={()=> setShowForm (!showForm)}>
+      <button className="btn-show-form" onClick={()=> setShowForm (!showForm)}>
         {showForm ? 'Hide Form' : 'Show Form'}
       </button>
       <CardList/>
-      {showForm ? <ContactForm/> : messageP}
+      {showForm ? <ContactForm/> : <p className="message-p">{messageP}</p>}
       <Footer/>
     </>
   );
