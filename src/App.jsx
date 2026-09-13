@@ -7,6 +7,7 @@ import ContactForm from './ContactForm.jsx'
 
 
 function App() {
+  const [isLoading,setIsLoading] = useState(true)
   const [showForm,setShowForm] = useState(false)
   let messageP = "This form is currently hidden. To reveal the form and continue with your application, please ensure you have completed all required fields in the previous section and agreed to the terms and conditions." 
   return (
@@ -16,6 +17,8 @@ function App() {
       <button className="btn-show-form" onClick={()=> setShowForm (!showForm)}>
         {showForm ? 'Hide Form' : 'Show Form'}
       </button>
+      {isLoading && <div className="loading-indicator"><span className="spinner"></span><span className="loading-text">Loading</span></div>}
+      <button className="loading-toggle" onClick={()=> setIsLoading(!isLoading)}>Click here</button>
       <CardList/>
       {showForm ? <ContactForm/> : <p className="message-p">{messageP}</p>}
       <Footer/>
