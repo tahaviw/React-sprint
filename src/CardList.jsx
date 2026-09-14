@@ -1,6 +1,12 @@
 import Card from './Card.jsx'
 
 function CardList() {
+    const hasCards = false
+    if (hasCards === false) {
+        return (
+            <p>No cards to display</p>
+        )
+    }
     return(
         <div className='card-list'>
             <Card title="Taha Belghiti" >
