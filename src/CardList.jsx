@@ -1,10 +1,10 @@
 import Card from './Card.jsx'
 
 function CardList() {
-    const hasCards = false
+    const hasCards = true
     if (hasCards === false) {
         return (
-            <p>No cards to display</p>
+            <p className="empty-state">No cards to display</p>
         )
     }
     return(
