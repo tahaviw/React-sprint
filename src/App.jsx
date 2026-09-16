@@ -8,21 +8,9 @@ import ContactForm from './ContactForm.jsx'
 
 function App() {
   const movies = [
-    {
-      id:1,
-      title:"Inception",
-      year:2010
-    },
-    {
-      id:2,
-      title:"The Grand Budapest Hotel",
-      year:2014
-    },
-    {
-      id:3,
-      title:"Spirited Away",
-      year:2001
-    }
+    {id:1, title:"Inception", year:2010},
+    {id:2, title:"The Grand Budapest Hotel", year:2014},
+    { id:3, title:"Spirited Away", year:2001 }
   ]
   const [isLoading,setIsLoading] = useState(true)
   const [showForm,setShowForm] = useState(false)
