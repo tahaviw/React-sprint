@@ -7,7 +7,7 @@ import ContactForm from "./ContactForm.jsx";
 import MovieList from "./MovieList.jsx";
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [showForm, setShowForm] = useState(false);
   let messageP =
     "This form is currently hidden. To reveal the form and continue with your application, please ensure you have completed all required fields in the previous section and agreed to the terms and conditions.";

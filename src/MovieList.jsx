@@ -6,13 +6,12 @@ function MovieList() {
   ];
 
   return (
-    <div>
-      <h2>My Favorite Movies</h2>
+    <div className="movie-list">
+      <h2 className="movie-list-title">My Favorite Movies</h2>
       {movies.map((movie) => (
-        <div key={movie.id}>
-          <p>
-            {movie.title} ({movie.year})
-          </p>
+        <div key={movie.id} className="movie-item">
+          <span className="movie-title">{movie.title}</span>
+          <span className="movie-year">({movie.year})</span>
         </div>
       ))}
     </div>
