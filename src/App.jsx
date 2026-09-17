@@ -4,6 +4,7 @@ import Footer from "./Footer.jsx";
 import CardList from "./CardList.jsx";
 import SearchBar from "./SearchBar.jsx";
 import ContactForm from "./ContactForm.jsx";
+import MovieList from "./MovieList.jsx";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,6 +30,7 @@ function App() {
       >
         Click here
       </button>
+      <MovieList />
       <CardList />
       {showForm ? <ContactForm /> : <p className="message-p">{messageP}</p>}
       <Footer />
