@@ -6,11 +6,6 @@ import SearchBar from "./SearchBar.jsx";
 import ContactForm from "./ContactForm.jsx";
 
 function App() {
-  const [movies, setMovies] = useState([
-    { id: 1, title: "Inception", year: 2010 },
-    { id: 2, title: "The Grand Budapest Hotel", year: 2014 },
-    { id: 3, title: "Spirited Away", year: 2001 },
-  ]);
   const [isLoading, setIsLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
   let messageP =
@@ -34,30 +29,6 @@ function App() {
       >
         Click here
       </button>
-      <button
-        onClick={() => {
-          const newMovie = { id: Date.now(), title: "New Movie", year: 2025 };
-          setMovies([newMovie, ...movies]);
-        }}
-      >
-        Add Movie to Top
-      </button>
-
-      <button
-        onClick={() => {
-          setMovies(movies.filter((_, index) => index !== 1));
-        }}
-      >
-        Remove Middle Movie
-      </button>
-      <div className="movie-list">
-        {movies.map((movie) => (
-          <div key={movie.id} className="movie-item">
-            <p className="movie-title">{movie.title}</p>
-            <p className="movie-year">({movie.year})</p>
-          </div>
-        ))}
-      </div>
       <CardList />
       {showForm ? <ContactForm /> : <p className="message-p">{messageP}</p>}
       <Footer />
