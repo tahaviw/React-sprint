@@ -5,6 +5,7 @@ import CardList from "./CardList.jsx";
 import SearchBar from "./SearchBar.jsx";
 import ContactForm from "./ContactForm.jsx";
 import MovieList from "./MovieList.jsx";
+import Counter from "./Counter.jsx";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <Header />
+      <Counter />
       <SearchBar />
       <button className="btn-show-form" onClick={() => setShowForm(!showForm)}>
         {showForm ? "Hide Form" : "Show Form"}
