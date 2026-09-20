@@ -7,7 +7,7 @@ function Counter() {
   // }, []);
   useEffect(() => {
     console.log("Count changed to:", count);
-  }, [count]);
+  }, []);
   return (
     <div className="counter-card">
       <p>Current count: {count}</p>
