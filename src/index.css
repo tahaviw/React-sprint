@@ -546,3 +546,92 @@ form > button:hover {
 .movie-item:last-child:hover {
   transform: none;
 }
+
+/* Counter Card */
+.counter-card {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 32px 48px;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+.counter-card p {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* Liquid Glass Button */
+.liquid-glass-btn {
+  position: relative;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  padding: 12px 28px;
+  cursor: pointer;
+  overflow: hidden;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition:
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    transform 0.2s ease,
+    color 0.3s ease;
+}
+
+.liquid-glass-btn:hover {
+  border-color: rgba(150, 150, 150, 0.5);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  color: #000;
+}
+
+.liquid-glass-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.liquid-shine {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    115deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.6) 45%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0.6) 55%,
+    transparent 70%
+  );
+  animation: liquid-shimmer 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes liquid-shimmer {
+  0% {
+    transform: translate(-30%, -30%) rotate(0deg);
+  }
+  50% {
+    transform: translate(30%, 30%) rotate(180deg);
+  }
+  100% {
+    transform: translate(-30%, -30%) rotate(360deg);
+  }
+}
+
+.liquid-glass-btn:hover .liquid-shine {
+  animation-duration: 1.5s;
+}
