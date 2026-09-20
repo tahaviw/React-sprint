@@ -2,9 +2,12 @@ import { useState, useEffect } from "react";
 
 function Counter() {
   const [count, setCount] = useState(0);
+  // useEffect(() => {
+  //   console.log("Component loaded");
+  // }, []);
   useEffect(() => {
-    console.log("Component loaded");
-  }, []);
+    console.log("Count changed to:", count);
+  }, [count]);
   return (
     <div className="counter-card">
       <p>Current count: {count}</p>
