@@ -2,17 +2,17 @@ import { useState, useEffect } from "react";
 
 function Counter() {
   const [count, setCount] = useState(0);
-  // useEffect(() => {
-  //   console.log("Component loaded");
-  // }, []);
   useEffect(() => {
-    console.log("Count changed to:", count);
+    console.log("Component loaded");
   }, []);
   return (
     <div className="counter-card">
       <p>Current count: {count}</p>
 
-      <button className="liquid-glass-btn" onClick={() => setCount(count + 1)}>
+      <button
+        onClick={() => setCount(count + 1)}
+        className="liquid-glass-btn counter-btn"
+      >
         <span className="liquid-shine"></span>
         Increment
       </button>
