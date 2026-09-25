@@ -8,13 +8,13 @@ function MovieFetch() {
       const url = "https://jsonplaceholder.typicode.com/posts/1";
       try {
         const response = await fetch(url);
-        setMovie(response);
         if (!response.ok) {
           throw new Error(`Response status: ${response.status}`);
         }
 
         const result = await response.json();
-        console.log(result);
+        setMovie(result);
+        console.log(movie);
       } catch (error) {
         console.error(error.message);
       }
