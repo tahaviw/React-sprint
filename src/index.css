@@ -635,3 +635,28 @@ form > button:hover {
 .liquid-glass-btn:hover .liquid-shine {
   animation-duration: 1.5s;
 }
+
+/* MovieFetcher */
+.movie-fetcher {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 32px;
+}
+
+.movie-fetcher .loading {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.movie-fetcher .title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: center;
+  max-width: 600px;
+  line-height: 1.4;
+}

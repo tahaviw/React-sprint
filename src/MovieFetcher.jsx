@@ -22,7 +22,9 @@ function MovieFetch() {
     getData()
   }, []);
   return (
-    movie === null ? <p>Loading...</p> : <p>{movie.title}</p>
+    <div className="movie-fetcher">
+      {movie === null ? <p className="loading">Loading...</p> : <p className="title">{movie.title}</p>}
+    </div>
   );
 }
 
