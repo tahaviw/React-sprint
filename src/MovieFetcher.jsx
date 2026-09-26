@@ -19,6 +19,7 @@ function MovieFetch() {
         console.error(error.message);
       }
     }
+    getData()
   }, []);
   return (
     movie === null ? <p>Loading...</p> : <p>{movie.title}</p>
