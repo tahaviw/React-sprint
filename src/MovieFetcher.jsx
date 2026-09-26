@@ -14,11 +14,15 @@ function MovieFetch() {
 
         const result = await response.json();
         setMovie(result);
-        console.log(movie);
+        console.log(result);
       } catch (error) {
         console.error(error.message);
       }
     }
   }, []);
-  return;
+  return (
+    movie === null ? <p>Loading...</p> : <p>{movie.title}</p>
+  );
 }
+
+export default MovieFetch
